@@ -1,6 +1,6 @@
 {
   "name": "@aggc/ui",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Shared Vue UI primitives, patterns, and tokens for AGGC desktop and web.",
   "type": "module",
   "license": "MIT",
