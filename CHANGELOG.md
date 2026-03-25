@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.5.0
+
+### Minor Changes
+
+- [`a9a314e`](https://github.com/jmtrs/aggc-ui/commit/a9a314ed05e138b5a2074ce96276b7426113bc0f) Thanks [@jmtrs](https://github.com/jmtrs)! - Publish `src/` in the npm tarball for PandaCSS consumers.
+
+  PandaCSS uses static analysis to find `cva()`, `css()` calls. The compiled `dist/` renames
+  these functions (Rollup tree-shaking), making them invisible to PandaCSS. Consumers that use
+  PandaCSS must scan the source files instead.
+
+  Add to `panda.config.ts`:
+
+  ```ts
+  include: ["./src/**/*.{ts,vue}", "./node_modules/@aggc/ui/src/**/*.{ts,vue}"];
+  ```
+
 ## 0.4.1
 
 ### Patch Changes
