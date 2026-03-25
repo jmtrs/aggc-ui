@@ -14,3 +14,9 @@ copyFileSync(fontsSourcePath, fontsTargetPath);
 
 const uiCss = `${readFileSync(baseCssPath, "utf8").trim()}\n\n${readFileSync(generatedCssPath, "utf8").trim()}\n`;
 writeFileSync(uiCssTargetPath, uiCss);
+
+// CSS side-effect JS entrypoint: allows `import '@aggc/ui/css'` in bundlers
+const cssJsPath = resolve(rootDir, "dist/css.js");
+const cssDtsPath = resolve(rootDir, "dist/css.d.ts");
+writeFileSync(cssJsPath, 'import "./ui.css";\n');
+writeFileSync(cssDtsPath, "// CSS side-effect entrypoint for @aggc/ui\nexport {};\n");

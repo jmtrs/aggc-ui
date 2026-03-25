@@ -9,6 +9,8 @@ const requiredFiles = [
   "components.js",
   "styles.js",
   "tokens.js",
+  "css.js",
+  "css.d.ts",
   "ui.css",
   "fonts.css",
   "index.d.ts",
