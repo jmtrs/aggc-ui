@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.1
+
+### Patch Changes
+
+- [`b5d9f21`](https://github.com/jmtrs/aggc-ui/commit/b5d9f21f3e49ddfb107c6896ac7f9c47df98f134) Thanks [@jmtrs](https://github.com/jmtrs)! - Fix release workflow: run build before publish so dist/ is included in the npm tarball.
+
 ## 0.4.0
 
 ### Minor Changes
