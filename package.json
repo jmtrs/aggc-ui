@@ -72,7 +72,19 @@
       "types": "./dist/tokens.d.ts",
       "import": "./dist/tokens.js"
     },
-    "./css": "./dist/ui.css",
+    "./tokens/core": {
+      "types": "./dist/tokens-core.d.ts",
+      "import": "./dist/tokens-core.js"
+    },
+    "./tokens/desktop-only": {
+      "types": "./dist/tokens-desktop.d.ts",
+      "import": "./dist/tokens-desktop.js"
+    },
+    "./css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.js"
+    },
+    "./ui.css": "./dist/ui.css",
     "./fonts": "./dist/fonts.css"
   },
   "peerDependencies": {

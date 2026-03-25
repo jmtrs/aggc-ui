@@ -1,6 +1,6 @@
 # `@aggc/ui`
 
-Shared Vue UI primitives, styles, and patterns for AGGC desktop and future web surfaces.
+Shared Vue UI primitives, styles, and patterns for AGGC desktop and web surfaces.
 
 ## Scope
 
@@ -46,7 +46,10 @@ You can also consume the public subpaths:
 
 - `@aggc/ui/components`
 - `@aggc/ui/styles`
-- `@aggc/ui/tokens`
+- `@aggc/ui/tokens` — full token map (core + desktop-only)
+- `@aggc/ui/tokens/core` — shared tokens: `text.*`, `bg.*`, `border.*`, `badge.*`, spacing, radii, typography, motion
+- `@aggc/ui/tokens/desktop-only` — desktop-only tokens: `result.*`, `nav.*`, `sync.*`
+- `@aggc/ui/ui.css` — direct CSS asset (for bundlers that handle CSS imports natively)
 
 Everything else in this repo is maintenance tooling for the package itself:
 

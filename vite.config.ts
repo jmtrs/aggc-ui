@@ -17,6 +17,8 @@ export default defineConfig({
         components: fileURLToPath(new URL("./src/components.ts", import.meta.url)),
         styles: fileURLToPath(new URL("./src/styles.ts", import.meta.url)),
         tokens: fileURLToPath(new URL("./src/tokens.ts", import.meta.url)),
+        "tokens-core": fileURLToPath(new URL("./src/tokens-core.ts", import.meta.url)),
+        "tokens-desktop": fileURLToPath(new URL("./src/tokens-desktop.ts", import.meta.url)),
       },
       formats: ["es"],
       fileName: (_, entryName) => `${entryName}.js`,
