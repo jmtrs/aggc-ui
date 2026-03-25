@@ -51,6 +51,25 @@ You can also consume the public subpaths:
 - `@aggc/ui/tokens/desktop-only` — desktop-only tokens: `result.*`, `nav.*`, `sync.*`
 - `@aggc/ui/ui.css` — direct CSS asset (for bundlers that handle CSS imports natively)
 
+## PandaCSS consumer setup
+
+If you use PandaCSS in your app, add the package sources to your `panda.config.ts` scanner.
+This is required because PandaCSS does static analysis — it needs the original source files where
+`cva`, `css`, etc. appear by name. The compiled `dist/` renames these functions and PandaCSS
+cannot recognize them.
+
+```ts
+// panda.config.ts
+export default defineConfig({
+  include: [
+    './src/**/*.{ts,vue}',
+    './node_modules/@aggc/ui/src/**/*.{ts,vue}',
+  ],
+})
+```
+
+The `src/` directory is published in the package specifically for this purpose.
+
 Everything else in this repo is maintenance tooling for the package itself:
 
 - `src/stories/**` powers Storybook docs
