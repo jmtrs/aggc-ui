@@ -1,0 +1,13 @@
+node_modules
+dist
+storybook-static
+.storybook-cache
+styled-system
+.DS_Store
+coverage
+.idea
+playwright-report
+test-results
+*.tgz
+examples/**/dist
+examples/**/node_modules

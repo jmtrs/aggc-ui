@@ -1,0 +1,16 @@
+{
+  "name": "aggc-ui-vue-consumer-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@aggc/ui": "file:../..",
+    "vue": "^3.5.18"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "vite": "^7.0.4"
+  }
+}

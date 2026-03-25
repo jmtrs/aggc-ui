@@ -1,0 +1,15 @@
+html,
+body,
+#storybook-root {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(49, 94, 255, 0.16), transparent 34%),
+    #0a1018;
+}
+
+#storybook-root {
+  padding: 1.5rem;
+}
