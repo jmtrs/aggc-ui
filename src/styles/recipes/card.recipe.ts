@@ -36,6 +36,11 @@ export const cardRecipe = cva({
         borderColor: "border.default",
         bg: "bg.cardAlt",
         cursor: "pointer",
+        _hover: {
+          borderColor: "border.strong",
+          bg: "bg.card",
+          transform: "translateY(-1px)",
+        },
       },
     },
     padding: {
