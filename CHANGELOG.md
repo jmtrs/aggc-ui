@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.1
+
+### Patch Changes
+
+- [#10](https://github.com/jmtrs/aggc-ui/pull/10) [`0729377`](https://github.com/jmtrs/aggc-ui/commit/072937703a02d0cd8bc0924fb5d844c1f86745ee) Thanks [@jmtrs](https://github.com/jmtrs)! - Add `@storybook/addon-mcp` to Storybook configuration, enabling MCP-based access to component stories and documentation during development.
+
 ## 0.5.0
 
 ### Minor Changes
