@@ -109,12 +109,15 @@ import { buttonRecipe } from '../styles'    // shared recipes via barrel
 
 ## Release Workflow
 
-1. `npx changeset` — document the change, select bump type
-2. Push to `main` — CI auto-creates a "Version Packages" PR
-3. Merge that PR — `release.yml` builds then publishes to npm
+1. `npx changeset` — document the change, select bump type (patch/minor/major)
+2. Commit the `.changeset/*.md` file alongside the code
+3. Merge to `main` — CI auto-creates a "Version Packages" PR
+4. Merge that PR — `release.yml` builds then publishes to npm
 
 - Never manually edit `CHANGELOG.md` or `package.json` version
 - Base branch: `main`; internal dep bumps default to `patch`
+
+> Cuándo usar patch vs minor vs major, con ejemplos: `.claude/rules/release.md`
 
 ---
 
