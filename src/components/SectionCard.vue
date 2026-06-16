@@ -23,7 +23,7 @@ const props = withDefaults(defineProps<{
   scrollBody?: boolean;
   collapseBodyGap?: boolean;
 }>(), {
-  eyebrow: "Workspace surface",
+  eyebrow: undefined,
   description: "",
   scrollBody: false,
   collapseBodyGap: false,

@@ -7,29 +7,25 @@ export const buttonRecipe = cva({
     alignItems: "center",
     justifyContent: "center",
     gap: "2",
-    borderRadius: "xl",
+    borderRadius: "lg",
     px: "4",
-    py: "3",
+    py: "2.5",
     fontSize: "sm",
-    fontWeight: "700",
+    fontWeight: "600",
     letterSpacing: "0.01em",
-    backdropFilter: "blur(22px) saturate(140%)",
-    transition: "all 160ms ease",
+    transition: "background-color 160ms ease, border-color 160ms ease, color 160ms ease, box-shadow 160ms ease",
     userSelect: "none",
     whiteSpace: "nowrap",
   },
   variants: {
     variant: {
       solid: {
-        bg: "linear-gradient(135deg, rgba(31,67,182,0.96) 0%, rgba(49,94,255,0.92) 100%)",
+        bg: "text.accent",
         color: "text.inverse",
         borderWidth: "1px",
-        borderColor: "rgba(255,255,255,0.18)",
-        boxShadow: "0 22px 36px -24px rgba(49,94,255,0.78), inset 0 1px 0 rgba(255,255,255,0.24)",
+        borderColor: "transparent",
         _dark: {
           color: "#f7f9fd",
-          borderColor: "rgba(255,255,255,0.06)",
-          boxShadow: "0 22px 40px -24px rgba(71,121,255,0.55), inset 0 1px 0 rgba(255,255,255,0.18)",
         },
       },
       outline: {
@@ -37,20 +33,12 @@ export const buttonRecipe = cva({
         color: "text.secondary",
         borderWidth: "1px",
         borderColor: "border.default",
-        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.18)",
-        _dark: {
-          boxShadow: "inset 0 1px 0 rgba(255,255,255,0.04)",
-        },
       },
       subtle: {
         bg: "bg.accentSoft",
         color: "text.accent",
         borderWidth: "1px",
         borderColor: "badge.infoBorder",
-        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.22)",
-        _dark: {
-          boxShadow: "inset 0 1px 0 rgba(255,255,255,0.04)",
-        },
       },
     },
     disabled: {
@@ -76,8 +64,8 @@ export const buttonRecipe = cva({
       loading: false,
       css: {
         _hover: {
-          transform: "translateY(-1px)",
-          boxShadow: "0 24px 42px -24px rgba(49,94,255,0.82), inset 0 1px 0 rgba(255,255,255,0.28)",
+          bg: "text.accent",
+          opacity: 0.9,
         },
       },
     },
@@ -90,7 +78,6 @@ export const buttonRecipe = cva({
           color: "text.primary",
           borderColor: "border.strong",
           bg: "bg.cardStrong",
-          transform: "translateY(-1px)",
         },
       },
     },
@@ -102,7 +89,6 @@ export const buttonRecipe = cva({
         _hover: {
           bg: "bg.selected",
           borderColor: "border.accent",
-          transform: "translateY(-1px)",
         },
       },
     },
