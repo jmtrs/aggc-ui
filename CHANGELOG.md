@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.6.0
+
+### Minor Changes
+
+- [#12](https://github.com/jmtrs/aggc-ui/pull/12) [`c0099e2`](https://github.com/jmtrs/aggc-ui/commit/c0099e242435d9384ad78a63a74e1afb173b0a48) Thanks [@jmtrs](https://github.com/jmtrs)! - Simplify surface panels and button recipes for cleaner admin UI
+
+  - surfaces: remove glassmorphism (backdrop-filter, gradient overlays), reduce border-radius from 3xl to xl
+  - buttons: replace gradient solid with solid bg, remove inset shadows, fix transition:all to explicit properties
+  - SectionCard: eyebrow prop defaults to undefined instead of "Workspace surface"
+
+### Patch Changes
+
+- [#12](https://github.com/jmtrs/aggc-ui/pull/12) [`c0099e2`](https://github.com/jmtrs/aggc-ui/commit/c0099e242435d9384ad78a63a74e1afb173b0a48) Thanks [@jmtrs](https://github.com/jmtrs)! - Add `@storybook/addon-mcp` to Storybook configuration, enabling MCP-based access to component stories and documentation during development.
+
 ## 0.5.1
 
 ### Patch Changes
