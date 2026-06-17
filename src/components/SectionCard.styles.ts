@@ -26,7 +26,7 @@ export const sectionCardHeaderClass = pageHeaderRootClass;
 export const sectionCardHeaderWithGapClass = css({
   position: "relative",
   zIndex: "1",
-  mb: "5",
+  mb: "4",
 });
 
 export const sectionCardHeaderCollapsedGapClass = css({

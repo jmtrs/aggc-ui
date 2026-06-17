@@ -21,8 +21,8 @@ export const uiLoadingStatePulseClass = css({
   borderRadius: "full",
   flexShrink: "0",
   bg: "text.accent",
-  boxShadow: "0 0 0 0 rgba(49,94,255,0.35)",
-  animation: "loadingPulse 1.2s ease-out infinite",
+  boxShadow: "0 0 0 0 var(--colors-bg-accentSoft, rgba(49, 94, 255, 0.3))",
+  animation: "loadingPulse 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) infinite",
 });
 
 export const uiLoadingStateContentClass = css({

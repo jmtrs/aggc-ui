@@ -19,4 +19,9 @@ export const pageScrollRegionClass = css({
   overflowY: "auto",
   paddingRight: "1",
   alignContent: "start",
+  scrollbarWidth: "thin",
+  scrollbarColor: "rgba(148, 163, 184, 0.3) transparent",
+  _dark: {
+    scrollbarColor: "rgba(255, 255, 255, 0.12) transparent",
+  },
 });

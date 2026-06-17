@@ -7,30 +7,28 @@ export const uiCheckboxRootClass = cva({
     alignItems: "flex-start",
     gap: "3",
     textAlign: "left",
-    borderRadius: "2xl",
+    borderRadius: "xl",
     borderWidth: "1px",
     px: "4",
     py: "3.5",
     color: "text.primary",
-    transition: "all 160ms ease",
+    transition: "border-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), background-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 160ms cubic-bezier(0.25, 0.1, 0.25, 1)",
   },
   variants: {
     checked: {
       true: {
         borderColor: "border.accent",
         bg: "bg.selected",
-        boxShadow: "0 18px 40px -30px rgba(49,94,255,0.56)",
       },
       false: {
         borderColor: "border.default",
         bg: "bg.input",
-        boxShadow: "0 14px 32px -30px rgba(15,23,42,0.42)",
       },
     },
     disabled: {
       true: {
         cursor: "not-allowed",
-        opacity: 0.5,
+        opacity: 0.45,
       },
       false: {
         cursor: "pointer",
@@ -44,7 +42,6 @@ export const uiCheckboxRootClass = cva({
       css: {
         _hover: {
           borderColor: "border.accent",
-          transform: "translateY(-1px)",
         },
       },
     },
@@ -54,7 +51,6 @@ export const uiCheckboxRootClass = cva({
       css: {
         _hover: {
           borderColor: "border.strong",
-          transform: "translateY(-1px)",
         },
       },
     },
@@ -72,11 +68,11 @@ export const uiCheckboxIndicatorClass = cva({
     width: "22px",
     height: "22px",
     borderRadius: "md",
-    borderWidth: "1px",
+    borderWidth: "1.5px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    transition: "all 160ms ease",
+    transition: "border-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), background-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), transform 160ms cubic-bezier(0.25, 0.1, 0.25, 1)",
   },
   variants: {
     checked: {
@@ -84,13 +80,13 @@ export const uiCheckboxIndicatorClass = cva({
         borderColor: "border.accent",
         bg: "bg.accentStrong",
         color: "text.inverse",
-        boxShadow: "0 12px 24px -16px rgba(49,94,255,0.7)",
+        transform: "scale(1)",
       },
       false: {
         borderColor: "border.default",
         bg: "bg.buttonOutline",
         color: "transparent",
-        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.32)",
+        transform: "scale(1)",
       },
     },
   },

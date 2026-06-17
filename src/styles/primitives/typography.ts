@@ -3,21 +3,22 @@ import { css } from "@styled/css";
 export const eyebrowClass = css({
   fontSize: "xs",
   textTransform: "uppercase",
-  letterSpacing: "0.12em",
+  letterSpacing: "0.08em",
   color: "text.muted",
-  fontWeight: "700",
+  fontWeight: "600",
 });
 
 export const sectionTitleClass = css({
   fontFamily: "heading",
   fontSize: { base: "2xl", md: "3xl" },
-  lineHeight: "1",
+  lineHeight: "1.1",
   color: "text.primary",
+  textWrap: "balance",
 });
 
 export const sectionDescriptionClass = css({
   color: "text.secondary",
-  lineHeight: "1.65",
+  lineHeight: "1.6",
   fontSize: "sm",
 });
 

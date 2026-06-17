@@ -28,6 +28,7 @@ export const coreColorTokens = {
     menu: { value: { base: "rgba(255, 255, 255, 0.9)", _dark: "rgba(9, 12, 18, 0.99)" } },
     accentSoft: { value: { base: "rgba(49, 94, 255, 0.1)", _dark: "rgba(138, 180, 255, 0.18)" } },
     accentStrong: { value: { base: "rgba(49, 94, 255, 0.86)", _dark: "rgba(122, 170, 255, 0.82)" } },
+    dangerSoft: { value: { base: "rgba(217, 45, 32, 0.06)", _dark: "rgba(255, 142, 127, 0.08)" } },
   },
   border: {
     soft: { value: { base: "rgba(148, 163, 184, 0.14)", _dark: "rgba(255, 255, 255, 0.035)" } },
@@ -35,6 +36,7 @@ export const coreColorTokens = {
     default: { value: { base: "rgba(109, 130, 164, 0.28)", _dark: "rgba(255, 255, 255, 0.14)" } },
     strong: { value: { base: "rgba(80, 98, 127, 0.42)", _dark: "rgba(255, 255, 255, 0.22)" } },
     accent: { value: { base: "rgba(82, 121, 255, 0.5)", _dark: "rgba(125, 171, 255, 0.44)" } },
+    danger: { value: { base: "rgba(217, 45, 32, 0.35)", _dark: "rgba(255, 142, 127, 0.35)" } },
   },
   badge: {
     successBg: { value: { base: "rgba(19, 163, 74, 0.12)", _dark: "rgba(19, 80, 58, 0.7)" } },
@@ -49,5 +51,8 @@ export const coreColorTokens = {
     neutralBg: { value: { base: "rgba(99, 115, 148, 0.08)", _dark: "rgba(21, 26, 35, 0.92)" } },
     neutralText: { value: { base: "#4b5d7a", _dark: "#d0d7e4" } },
     neutralBorder: { value: { base: "rgba(109, 130, 164, 0.18)", _dark: "rgba(183, 195, 215, 0.22)" } },
+    dangerBg: { value: { base: "rgba(217, 45, 32, 0.12)", _dark: "rgba(255, 142, 127, 0.15)" } },
+    dangerText: { value: { base: "#b42318", _dark: "#ff8e7f" } },
+    dangerBorder: { value: { base: "rgba(217, 45, 32, 0.22)", _dark: "rgba(255, 142, 127, 0.3)" } },
   },
 } as const;

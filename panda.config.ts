@@ -54,8 +54,11 @@ export default defineConfig({
     },
     "input, textarea, button": { outline: "none" },
     "::selection": {
-      background: "rgba(49, 94, 255, 0.24)",
+      background: "rgba(49, 94, 255, 0.2)",
       color: "inherit",
+    },
+    "h1, h2, h3": {
+      textWrap: "balance",
     },
   },
 });

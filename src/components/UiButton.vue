@@ -10,6 +10,8 @@ import {
 withDefaults(
   defineProps<{
     variant?: "solid" | "outline" | "subtle";
+    size?: "sm" | "md" | "lg";
+    tone?: "default" | "danger";
     loading?: boolean;
     loadingLabel?: string;
     disabled?: boolean;
@@ -18,6 +20,8 @@ withDefaults(
   }>(),
   {
     variant: "solid",
+    size: "md",
+    tone: "default",
     loading: false,
     loadingLabel: "Working...",
     disabled: false,
@@ -33,7 +37,7 @@ withDefaults(
     :disabled="disabled || loading"
     :aria-busy="loading || undefined"
     :aria-label="ariaLabel"
-    :class="uiButtonClass({ variant, disabled, loading })"
+    :class="uiButtonClass({ variant, size, tone, disabled, loading })"
   >
     <span :class="[uiButtonContentClass, loading ? uiButtonHiddenContentClass : undefined]">
       <slot />

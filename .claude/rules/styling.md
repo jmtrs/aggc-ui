@@ -22,7 +22,7 @@ export const uiCheckboxRootClass = cva({
     checked: { true: { bg: 'bg.selected' }, false: { bg: 'bg.input' } },
     disabled: { true: { opacity: 0.5 }, false: { cursor: 'pointer' } },
   },
-  compoundVariants: [{ checked: true, disabled: false, css: { _hover: { transform: 'translateY(-1px)' } } }],
+  compoundVariants: [{ checked: true, disabled: false, css: { _hover: { borderColor: 'border.accent' } } }],
   defaultVariants: { checked: false, disabled: false },
 })
 
