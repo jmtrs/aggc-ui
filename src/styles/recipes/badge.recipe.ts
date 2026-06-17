@@ -13,11 +13,6 @@ export const badgeRecipe = cva({
     fontWeight: "600",
     lineHeight: "1",
     whiteSpace: "nowrap",
-    backdropFilter: "blur(16px) saturate(140%)",
-    boxShadow: "inset 0 1px 0 rgba(255,255,255,0.16)",
-    _dark: {
-      boxShadow: "inset 0 1px 0 rgba(255,255,255,0.04)",
-    },
   },
   variants: {
     tone: {
@@ -40,6 +35,11 @@ export const badgeRecipe = cva({
         borderColor: "badge.warningBorder",
         bg: "badge.warningBg",
         color: "badge.warningText",
+      },
+      danger: {
+        borderColor: "badge.dangerBorder",
+        bg: "badge.dangerBg",
+        color: "badge.dangerText",
       },
     },
     size: {

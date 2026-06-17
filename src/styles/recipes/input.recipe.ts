@@ -8,16 +8,23 @@ export const inputRecipe = cva({
     bg: "bg.input",
     color: "text.primary",
     fontSize: "sm",
-    backdropFilter: "blur(22px) saturate(145%)",
-    transition: "border-color 160ms ease, background 160ms ease",
+    transition: "border-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), background-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 160ms cubic-bezier(0.25, 0.1, 0.25, 1)",
     _placeholder: {
       color: "text.muted",
     },
     _hover: {
       borderColor: "border.strong",
     },
+    _focusVisible: {
+      outline: "none",
+      borderColor: "border.accent",
+      boxShadow: "0 0 0 3px var(--colors-bg-accentSoft, rgba(49, 94, 255, 0.12))",
+    },
     _dark: {
-      boxShadow: "inset 0 1px 0 rgba(255,255,255,0.03)",
+      borderColor: "border.strong",
+      _focusVisible: {
+        boxShadow: "0 0 0 3px var(--colors-bg-accentSoft, rgba(138, 180, 255, 0.14))",
+      },
     },
   },
   variants: {
@@ -28,7 +35,6 @@ export const inputRecipe = cva({
         px: "3",
         py: "2.5",
         lineHeight: "1.45",
-        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.2)",
       },
       md: {
         minHeight: "48px",
@@ -36,7 +42,6 @@ export const inputRecipe = cva({
         px: "4",
         py: "3",
         lineHeight: "1.5",
-        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.24), 0 14px 28px -28px rgba(15,23,42,0.42)",
       },
     },
     kind: {
@@ -48,7 +53,6 @@ export const inputRecipe = cva({
         py: "4",
         lineHeight: "1.6",
         fontFamily: "mono",
-        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.24), 0 18px 36px -32px rgba(15,23,42,0.42)",
       },
     },
   },

@@ -16,7 +16,7 @@ export const uiFieldTopRowClass = css({
 
 export const uiFieldLabelWrapClass = css({
   display: "grid",
-  gap: "1",
+  gap: "0.5",
   minWidth: "0",
 });
 
@@ -24,7 +24,7 @@ export const uiFieldEyebrowClass = eyebrowClass;
 
 export const uiFieldLabelClass = css({
   fontSize: "sm",
-  fontWeight: "700",
+  fontWeight: "600",
   color: "text.primary",
 });
 

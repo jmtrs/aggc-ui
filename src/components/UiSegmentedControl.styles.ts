@@ -9,8 +9,9 @@ export const segmentedControlContainerClass = css({
   bg: "bg.input",
   padding: "1",
   gap: "1",
-  backdropFilter: "blur(18px) saturate(140%)",
-  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.18)",
+  _dark: {
+    borderColor: "border.strong",
+  },
 });
 
 export const segmentedControlOptionClass = cva({
@@ -22,7 +23,12 @@ export const segmentedControlOptionClass = cva({
     fontWeight: "600",
     cursor: "pointer",
     borderWidth: "1px",
-    transition: "all 160ms ease",
+    transition: "background-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), border-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 160ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+    _focusVisible: {
+      outline: "2px solid",
+      outlineColor: "text.accent",
+      outlineOffset: "2px",
+    },
   },
   variants: {
     active: {
@@ -30,9 +36,13 @@ export const segmentedControlOptionClass = cva({
         borderColor: "border.accent",
         bg: "bg.accentStrong",
         color: "text.inverse",
-        boxShadow: "0 14px 26px -16px rgba(49,94,255,0.68)",
         _hover: {
           bg: "bg.accentStrong",
+        },
+        _dark: {
+          bg: "rgba(138, 180, 255, 0.2)",
+          color: "text.accent",
+          borderColor: "border.accent",
         },
       },
       false: {

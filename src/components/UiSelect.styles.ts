@@ -26,8 +26,7 @@ export const uiSelectTriggerClass = cva({
     borderWidth: "1px",
     fontSize: "sm",
     overflow: "hidden",
-    backdropFilter: "blur(24px) saturate(145%)",
-    transition: "all 160ms ease",
+    transition: "border-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), background-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 160ms cubic-bezier(0.25, 0.1, 0.25, 1)",
   },
   variants: {
     size: {
@@ -48,12 +47,14 @@ export const uiSelectTriggerClass = cva({
       true: {
         borderColor: "border.accent",
         bg: "bg.cardStrong",
-        boxShadow: "0 18px 42px -28px rgba(49,94,255,0.42)",
+        _dark: {
+          borderColor: "border.accent",
+          bg: "bg.input",
+        },
       },
       false: {
         borderColor: "border.default",
         bg: "bg.input",
-        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.22)",
       },
     },
     selected: {
@@ -63,10 +64,15 @@ export const uiSelectTriggerClass = cva({
     disabled: {
       true: {
         cursor: "not-allowed",
-        opacity: 0.55,
+        opacity: 0.45,
       },
       false: {
         cursor: "pointer",
+        _focusVisible: {
+          outline: "2px solid",
+          outlineColor: "text.accent",
+          outlineOffset: "2px",
+        },
       },
     },
   },
@@ -77,6 +83,9 @@ export const uiSelectTriggerClass = cva({
         _hover: {
           borderColor: "border.strong",
           bg: "bg.cardStrong",
+          _dark: {
+            bg: "bg.input",
+          },
         },
       },
     },
@@ -120,7 +129,7 @@ export const uiSelectValueTextClass = css({
 export const uiSelectChevronClass = cva({
   base: {
     color: "text.muted",
-    transition: "transform 160ms ease",
+    transition: "transform 160ms cubic-bezier(0.25, 0.1, 0.25, 1)",
   },
   variants: {
     open: {
@@ -141,20 +150,25 @@ export const uiSelectOptionClass = cva({
     justifyContent: "space-between",
     gap: "3",
     textAlign: "left",
-    borderRadius: "xl",
+    borderRadius: "lg",
     px: "3",
     borderWidth: "1px",
     cursor: "pointer",
-    transition: "all 140ms ease",
+    transition: "border-color 140ms cubic-bezier(0.25, 0.1, 0.25, 1), background-color 140ms cubic-bezier(0.25, 0.1, 0.25, 1), color 140ms cubic-bezier(0.25, 0.1, 0.25, 1)",
     _hover: {
       bg: "bg.selected",
       borderColor: "border.accent",
+    },
+    _focusVisible: {
+      outline: "2px solid",
+      outlineColor: "text.accent",
+      outlineOffset: "-2px",
     },
   },
   variants: {
     size: {
       sm: { py: "2.5" },
-      md: { py: "3" },
+      md: { py: "2.5" },
     },
     active: {
       true: {
@@ -200,7 +214,7 @@ export const uiSelectOptionDescriptionClass = css({
 export const uiSelectCheckClass = cva({
   base: {
     color: "text.accent",
-    transition: "opacity 140ms ease",
+    transition: "opacity 140ms cubic-bezier(0.25, 0.1, 0.25, 1)",
   },
   variants: {
     selected: {

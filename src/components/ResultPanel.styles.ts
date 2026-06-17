@@ -6,6 +6,9 @@ export const resultPanelClass = cva({
   base: {
     borderWidth: "1px",
     padding: "5",
+    _dark: {
+      borderColor: "border.default",
+    },
   },
   variants: {
     ok: {
@@ -40,12 +43,13 @@ export const resultPanelSummaryClass = css({
 
 export const resultPanelIconClass = cva({
   base: {
-    width: "10",
-    height: "10",
+    width: "9",
+    height: "9",
     borderRadius: "full",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    flexShrink: "0",
   },
   variants: {
     ok: {
@@ -65,6 +69,7 @@ export const resultPanelTitleClass = css({
   fontSize: "lg",
   fontWeight: "700",
   color: "text.primary",
+  lineHeight: "1.3",
 });
 
 export const resultPanelSectionClass = cva({

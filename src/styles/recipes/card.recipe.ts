@@ -4,42 +4,53 @@ export const cardRecipe = cva({
   base: {
     minWidth: "0",
     borderWidth: "1px",
-    transition: "all 160ms ease",
+    transition: "border-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), background-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 160ms cubic-bezier(0.25, 0.1, 0.25, 1), transform 160ms cubic-bezier(0.25, 0.1, 0.25, 1)",
   },
   variants: {
     variant: {
       surface: {
         position: "relative",
-        overflow: "hidden",
-        borderRadius: "3xl",
+        borderRadius: "xl",
         borderColor: "border.subtle",
         bg: "bg.card",
-        backdropFilter: "blur(28px) saturate(155%)",
-        boxShadow: "0 25px 30px -35px rgba(15,23,42,0.42)",
+        boxShadow: "0 1px 2px 0 rgba(15,23,42,0.04), 0 1px 3px 0 rgba(15,23,42,0.06)",
+        _dark: {
+          borderColor: "border.default",
+          boxShadow: "0 1px 2px 0 rgba(0,0,0,0.2), 0 1px 3px 0 rgba(0,0,0,0.24)",
+        },
       },
       inset: {
-        borderRadius: "2xl",
+        borderRadius: "lg",
         borderColor: "border.soft",
         bg: "bg.cardAlt",
-        backdropFilter: "blur(24px) saturate(145%)",
-        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.22)",
+        _dark: {
+          borderColor: "border.subtle",
+        },
       },
       elevated: {
-        borderRadius: "2xl",
+        borderRadius: "lg",
         borderColor: "border.default",
         bg: "bg.cardStrong",
-        backdropFilter: "blur(24px) saturate(145%)",
-        boxShadow: "0 16px 32px -28px rgba(15,23,42,0.42)",
+        boxShadow: "0 1px 2px 0 rgba(15,23,42,0.04), 0 4px 12px -4px rgba(15,23,42,0.1)",
+        _dark: {
+          borderColor: "border.strong",
+          boxShadow: "0 1px 2px 0 rgba(0,0,0,0.24), 0 4px 12px -4px rgba(0,0,0,0.4)",
+        },
       },
       selectable: {
-        borderRadius: "2xl",
+        borderRadius: "lg",
         borderColor: "border.default",
         bg: "bg.cardAlt",
         cursor: "pointer",
         _hover: {
           borderColor: "border.strong",
           bg: "bg.card",
-          transform: "translateY(-1px)",
+        },
+        _dark: {
+          borderColor: "border.strong",
+          _hover: {
+            borderColor: "border.accent",
+          },
         },
       },
     },

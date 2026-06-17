@@ -9,6 +9,7 @@ export const errorTextClass = css({
   color: "text.error",
   fontSize: "sm",
   fontWeight: "600",
+  lineHeight: "1.5",
 });
 
 export const mutedTextClass = css({

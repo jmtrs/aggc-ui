@@ -3,7 +3,7 @@ import { statusBadgeClass } from "./StatusBadge.styles";
 
 const props = withDefaults(
   defineProps<{
-    tone?: "success" | "warning" | "info" | "neutral";
+    tone?: "success" | "warning" | "info" | "danger" | "neutral";
   }>(),
   {
     tone: "neutral",
