@@ -34,7 +34,7 @@ export const uiModalContentClass = cva({
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    zIndex: "50",
+    zIndex: "51",
     _dark: {
       boxShadow:
         "0 16px 48px -8px rgba(0, 0, 0, 0.56), 0 4px 16px -4px rgba(0, 0, 0, 0.32)",
