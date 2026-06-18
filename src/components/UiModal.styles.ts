@@ -42,9 +42,9 @@ export const uiModalContentClass = cva({
   },
   variants: {
     size: {
-      sm: { maxW: "400px" },
-      md: { maxW: "560px" },
-      lg: { maxW: "720px" },
+      sm: { maxW: "380px" },
+      md: { maxW: "480px" },
+      lg: { maxW: "640px" },
     },
   },
   defaultVariants: {
