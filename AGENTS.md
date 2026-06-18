@@ -21,6 +21,15 @@ CI pipeline: `typecheck` → `test` → `build` → `docs:build`
 
 ---
 
+## Branching — OBLIGATORIO
+
+- Toda rama parte de `main`, se borra tras el merge.
+- **⛔ Prohibido:** `develop`, `staging`, `release`, `dev`, `stage` y cualquier variante. Los squash merges crean SHAs nuevos → estas ramas divergen de `main` → conflictos irresolubles.
+- Un GitHub Action borra automáticamente cualquier rama con esos nombres si se crea en remote.
+- Alternativa para staging: PR draft hacia `main`.
+
+---
+
 ## Project Structure
 
 ```
