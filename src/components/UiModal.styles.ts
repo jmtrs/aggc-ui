@@ -24,7 +24,6 @@ export const uiModalContentClass = cva({
     borderWidth: "1px",
     borderColor: "border.subtle",
     p: "0",
-    w: "full",
     display: "flex",
     flexDirection: "column",
     maxH: "calc(100dvh - 2rem)",
@@ -42,9 +41,9 @@ export const uiModalContentClass = cva({
   },
   variants: {
     size: {
-      sm: { maxW: "380px" },
-      md: { maxW: "480px" },
-      lg: { maxW: "640px" },
+      sm: { w: "380px" },
+      md: { w: "480px" },
+      lg: { w: "640px" },
     },
   },
   defaultVariants: {
