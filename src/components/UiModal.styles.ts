@@ -30,6 +30,11 @@ export const uiModalContentClass = cva({
     boxShadow:
       "0 16px 48px -8px rgba(0, 0, 0, 0.12), 0 4px 16px -4px rgba(0, 0, 0, 0.06)",
     animation: "modalIn 240ms cubic-bezier(0.16, 1, 0.3, 1)",
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    zIndex: "50",
     _dark: {
       boxShadow:
         "0 16px 48px -8px rgba(0, 0, 0, 0.56), 0 4px 16px -4px rgba(0, 0, 0, 0.32)",

@@ -51,30 +51,29 @@ function handleOpenChange(open: boolean) {
 <template>
   <DialogRoot :open="open" @update:open="handleOpenChange">
     <DialogPortal>
-      <DialogOverlay :class="uiModalOverlayClass">
-        <DialogContent :class="uiModalContentClass({ size })">
-          <div :class="uiModalHeaderClass">
-            <div :class="uiModalHeaderContentClass">
-              <DialogTitle :class="uiModalTitleClass">{{ title }}</DialogTitle>
-              <DialogDescription v-if="description" :class="uiModalDescriptionClass">
-                {{ description }}
-              </DialogDescription>
-              <VisuallyHidden v-else>
-                <DialogDescription>{{ title }}</DialogDescription>
-              </VisuallyHidden>
-            </div>
-            <DialogClose :class="uiModalCloseClass" aria-label="Close dialog">
-              <X :size="20" aria-hidden="true" />
-            </DialogClose>
+      <DialogOverlay :class="uiModalOverlayClass" />
+      <DialogContent :class="uiModalContentClass({ size })">
+        <div :class="uiModalHeaderClass">
+          <div :class="uiModalHeaderContentClass">
+            <DialogTitle :class="uiModalTitleClass">{{ title }}</DialogTitle>
+            <DialogDescription v-if="description" :class="uiModalDescriptionClass">
+              {{ description }}
+            </DialogDescription>
+            <VisuallyHidden v-else>
+              <DialogDescription>{{ title }}</DialogDescription>
+            </VisuallyHidden>
           </div>
-          <div :class="uiModalBodyClass">
-            <slot />
-          </div>
-          <div v-if="$slots.actions" :class="uiModalActionsClass">
-            <slot name="actions" />
-          </div>
-        </DialogContent>
-      </DialogOverlay>
+          <DialogClose :class="uiModalCloseClass" aria-label="Close dialog">
+            <X :size="20" aria-hidden="true" />
+          </DialogClose>
+        </div>
+        <div :class="uiModalBodyClass">
+          <slot />
+        </div>
+        <div v-if="$slots.actions" :class="uiModalActionsClass">
+          <slot name="actions" />
+        </div>
+      </DialogContent>
     </DialogPortal>
   </DialogRoot>
 </template>
