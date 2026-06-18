@@ -11,7 +11,8 @@ export const buttonRecipe = cva({
     fontSize: "sm",
     fontWeight: "600",
     letterSpacing: "0.005em",
-    transition: "background-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), border-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 160ms cubic-bezier(0.25, 0.1, 0.25, 1), opacity 160ms cubic-bezier(0.25, 0.1, 0.25, 1), transform 160ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+    transition:
+      "background-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), border-color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), color 160ms cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 160ms cubic-bezier(0.25, 0.1, 0.25, 1), opacity 160ms cubic-bezier(0.25, 0.1, 0.25, 1), transform 160ms cubic-bezier(0.25, 0.1, 0.25, 1)",
     userSelect: "none",
     whiteSpace: "nowrap",
     _focusVisible: {
@@ -69,9 +70,6 @@ export const buttonRecipe = cva({
         color: "text.inverse",
         borderWidth: "1px",
         borderColor: "transparent",
-        _dark: {
-          color: "text.inverse",
-        },
       },
     },
     disabled: {
@@ -130,10 +128,16 @@ export const buttonRecipe = cva({
         color: "text.error",
         borderColor: "border.danger",
         bg: "transparent",
+        _dark: {
+          color: "text.error",
+        },
         _hover: {
           bg: "badge.dangerBg",
           borderColor: "text.error",
           color: "text.error",
+          _dark: {
+            color: "text.error",
+          },
         },
       },
     },
