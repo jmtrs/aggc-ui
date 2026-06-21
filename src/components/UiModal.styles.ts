@@ -4,41 +4,58 @@ export const uiModalOverlayClass = css({
   position: "fixed",
   inset: "0",
   bg: "rgba(0, 0, 0, 0.3)",
-  backdropFilter: "blur(12px)",
+  backdropFilter: "blur(8px)",
   _dark: {
     bg: "rgba(0, 0, 0, 0.5)",
   },
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
   zIndex: "50",
-  px: "4",
   overscrollBehavior: "contain",
   animation: "fadeIn 160ms cubic-bezier(0.16, 1, 0.3, 1)",
+});
+
+export const uiModalWrapperClass = css({
+  position: "fixed",
+  inset: "0",
+  display: "flex",
+  alignItems: { base: "flex-end", sm: "center" },
+  justifyContent: "center",
+  zIndex: "51",
+  pointerEvents: "none",
 });
 
 export const uiModalContentClass = cva({
   base: {
     bg: "bg.menu",
-    borderRadius: "xl",
     borderWidth: "1px",
     borderColor: "border.subtle",
     p: "0",
     display: "flex",
     flexDirection: "column",
-    maxH: "calc(100dvh - 2rem)",
-    boxShadow:
-      "0 16px 48px -8px rgba(0, 0, 0, 0.12), 0 4px 16px -4px rgba(0, 0, 0, 0.06)",
-    animation: "modalIn 240ms cubic-bezier(0.16, 1, 0.3, 1)",
-    position: "fixed",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    zIndex: "51",
+    // Mobile: bottom sheet — desktop: centered via wrapper
+    position: { base: "fixed", sm: "relative" },
+    bottom: { base: "0", sm: "auto" },
+    left: { base: "0", sm: "auto" },
+    right: { base: "0", sm: "auto" },
+    pointerEvents: "auto",
+    borderTopLeftRadius: "xl",
+    borderTopRightRadius: "xl",
+    borderBottomLeftRadius: { base: "0", sm: "xl" },
+    borderBottomRightRadius: { base: "0", sm: "xl" },
+    maxH: { base: "90dvh", sm: "calc(100dvh - 2rem)" },
+    animation: {
+      base: "modalSlideUp 300ms cubic-bezier(0.16, 1, 0.3, 1) backwards",
+      sm: "modalIn 240ms cubic-bezier(0.16, 1, 0.3, 1) backwards",
+    },
+    boxShadow: {
+      base: "0 -8px 32px -4px rgba(0, 0, 0, 0.12), 0 -2px 8px -2px rgba(0, 0, 0, 0.06)",
+      sm: "0 16px 48px -8px rgba(0, 0, 0, 0.12), 0 4px 16px -4px rgba(0, 0, 0, 0.06)",
+    },
     _dark: {
-      boxShadow:
-        "0 16px 48px -8px rgba(0, 0, 0, 0.56), 0 4px 16px -4px rgba(0, 0, 0, 0.32)",
       borderColor: "border.default",
+      boxShadow: {
+        base: "0 -8px 32px -4px rgba(0, 0, 0, 0.48), 0 -2px 8px -2px rgba(0, 0, 0, 0.24)",
+        sm: "0 16px 48px -8px rgba(0, 0, 0, 0.56), 0 4px 16px -4px rgba(0, 0, 0, 0.32)",
+      },
     },
     _focusVisible: {
       outline: "none",
@@ -46,9 +63,9 @@ export const uiModalContentClass = cva({
   },
   variants: {
     size: {
-      sm: { w: "380px" },
-      md: { w: "480px" },
-      lg: { w: "640px" },
+      sm: { w: { base: "full", sm: "380px" } },
+      md: { w: { base: "full", sm: "480px" } },
+      lg: { w: { base: "full", sm: "640px" } },
     },
   },
   defaultVariants: {
@@ -60,8 +77,8 @@ export const uiModalHeaderClass = css({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  p: "6",
-  pb: "4",
+  p: { base: "4", sm: "6" },
+  pb: { base: "3", sm: "4" },
 });
 
 export const uiModalHeaderContentClass = css({
@@ -109,8 +126,8 @@ export const uiModalCloseClass = css({
 });
 
 export const uiModalBodyClass = css({
-  px: "6",
-  pb: "6",
+  px: { base: "4", sm: "6" },
+  pb: { base: "4", sm: "6" },
   overflowY: "auto",
   overscrollBehavior: "contain",
 });
@@ -119,7 +136,7 @@ export const uiModalActionsClass = css({
   display: "flex",
   justifyContent: "flex-end",
   gap: "3",
-  p: "6",
+  p: { base: "4", sm: "6" },
   pt: "3",
   borderTopWidth: "1px",
   borderTopColor: "border.soft",

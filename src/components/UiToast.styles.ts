@@ -4,7 +4,7 @@ export const uiToastViewportClass = css({
   position: "fixed",
   bottom: "4",
   right: "4",
-  zIndex: "50",
+  zIndex: "60",
   display: "flex",
   flexDirection: "column",
   gap: "2",

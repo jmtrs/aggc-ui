@@ -372,3 +372,84 @@ import { PageSurface, SectionCard, StatusBadge, UiButton } from "@aggc/ui";
     </SectionCard>
   </PageSurface>
 </template>`;
+
+export const dataTableDefaultSource = `<script setup lang="ts">
+import { ref } from "vue";
+import { DataTable, UiButton, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuRoot, DropdownMenuTrigger, DropdownMenuContent } from "@aggc/ui";
+import type { DataTableColumn } from "@aggc/ui";
+
+interface Member { id: string; name: string; email: string; }
+
+const items = ref<Member[]>([
+  { id: "1", name: "Alice", email: "alice@example.com" },
+  { id: "2", name: "Bob", email: "bob@example.com" },
+]);
+
+const columns: DataTableColumn[] = [
+  { key: "name", label: "Member", width: "1fr" },
+  { key: "email", label: "Email", width: "1fr" },
+];
+
+const selected = ref<string[]>([]);
+</script>
+
+<template>
+  <DataTable v-model:selected="selected" :items="items" :columns="columns" searchable :search-fields="['name', 'email']">
+    <template #bulk-actions="{ selectedItems }">
+      <UiButton size="sm" variant="outline">{{ selectedItems.length }} selected</UiButton>
+    </template>
+    <template #cell-name="{ item }">{{ item.name }}</template>
+    <template #cell-email="{ item }">{{ item.email }}</template>
+    <template #actions="{ item }">
+      <DropdownMenuItem @select="() => {}">Edit {{ item.name }}</DropdownMenuItem>
+    </template>
+  </DataTable>
+</template>`;
+
+export const dataTableLoadingSource = `<script setup lang="ts">
+import { DataTable } from "@aggc/ui";
+import type { DataTableColumn } from "@aggc/ui";
+
+const columns: DataTableColumn[] = [
+  { key: "name", label: "Member", width: "1fr" },
+  { key: "email", label: "Email", width: "1fr" },
+];
+</script>
+
+<template>
+  <DataTable :items="[]" :columns="columns" :is-loading="true" searchable />
+</template>`;
+
+export const uiTooltipDefaultSource = `<script setup lang="ts">
+import { UiTooltip } from "@aggc/ui";
+</script>
+
+<template>
+  <UiTooltip content="Helpful tip">
+    <button type="button">Hover me</button>
+  </UiTooltip>
+</template>`;
+
+export const dataTableSortableSource = `<script setup lang="ts">
+import { ref } from "vue";
+import { DataTable } from "@aggc/ui";
+import type { DataTableColumn } from "@aggc/ui";
+
+interface Member { id: string; name: string; email: string; }
+
+const items = ref<Member[]>([
+  { id: "1", name: "Alice", email: "alice@example.com" },
+  { id: "2", name: "Bob", email: "bob@example.com" },
+  { id: "3", name: "Carla", email: "carla@example.com" },
+  { id: "4", name: "Dan", email: "dan@example.com" },
+]);
+
+const columns: DataTableColumn[] = [
+  { key: "name", label: "Member", width: "1fr", sortable: true },
+  { key: "email", label: "Email", width: "1fr", sortable: true },
+];
+</script>
+
+<template>
+  <DataTable :items="items" :columns="columns" :page-size="3" />
+</template>`;
