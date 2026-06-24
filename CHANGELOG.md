@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2
+
+### Patch Changes
+
+- [`8a78adc`](https://github.com/jmtrs/aggc-ui/commit/8a78adc7271f8addaad0777c617831e389bb6abd) Thanks [@jmtrs](https://github.com/jmtrs)! - Use changeset publish in release workflow so GitHub Releases and git tags are created automatically.
+
 ## 1.0.1
 
 ### Patch Changes
