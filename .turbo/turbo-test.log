@@ -1,0 +1,68 @@
+
+> @aggc/ui@0.7.2 test /Users/jmtrs/IdeaProjects/private-ai/aggc-ui
+> npm run panda:codegen && vitest run
+
+
+> @aggc/ui@0.7.2 panda:codegen
+> panda codegen && panda cssgen --outfile styled-system/styles.css
+
+✔️ `styled-system/css`: the css function to author styles
+✔️ `styled-system/tokens`: the css variables and js function to query your tokens
+✔️ `styled-system/patterns`: functions to implement and apply common layout patterns
+✔️ `styled-system/jsx`: styled jsx elements for vue
+
+
+🐼 info [css] /Users/jmtrs/IdeaProjects/private-ai/aggc-ui/styled-system/styles.css
+🐼 info [hrtime] Successfully extracted css from 103 file(s) ✨ (177.57ms)
+
+ RUN  v3.2.6 /Users/jmtrs/IdeaProjects/private-ai/aggc-ui
+
+stderr | src/components/UiToast.test.ts > UiToast > renders without errors
+[Vue warn]: Missing required prop: "tone" 
+  at <UiToast > 
+  at <ToastProvider tone="success" message="Workspace created" > 
+  at <Anonymous tone="success" message="Workspace created" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+[Vue warn]: Missing required prop: "message" 
+  at <UiToast > 
+  at <ToastProvider tone="success" message="Workspace created" > 
+  at <Anonymous tone="success" message="Workspace created" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+stderr | src/components/UiToast.test.ts > UiToast > passes message prop correctly
+[Vue warn]: Missing required prop: "tone" 
+  at <UiToast message="Custom message" > 
+  at <ToastProvider tone="success" message="Custom message" > 
+  at <Anonymous tone="success" message="Custom message" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+stderr | src/components/UiToast.test.ts > UiToast > passes duration prop
+[Vue warn]: Missing required prop: "tone" 
+  at <UiToast duration=8000 > 
+  at <ToastProvider tone="success" message="Workspace created" duration=8000 > 
+  at <Anonymous tone="success" message="Workspace created" duration=8000  ... > 
+  at <VTUROOT>
+[Vue warn]: Missing required prop: "message" 
+  at <UiToast duration=8000 > 
+  at <ToastProvider tone="success" message="Workspace created" duration=8000 > 
+  at <Anonymous tone="success" message="Workspace created" duration=8000  ... > 
+  at <VTUROOT>
+
+ ✓ src/components/UiToast.test.ts (4 tests) 82ms
+ ✓ src/components/UiButton.test.ts (1 test) 48ms
+ ✓ src/components/UiSelect.test.ts (2 tests) 108ms
+ ✓ src/components/UiAvatar.test.ts (4 tests) 137ms
+ ✓ src/components/UiTooltip.test.ts (3 tests) 135ms
+ ✓ src/components/UiModal.test.ts (5 tests) 440ms
+ ✓ src/components/DataTable.test.ts (19 tests) 547ms
+ ✓ src/components/StatusBadge.test.ts (1 test) 38ms
+ ✓ src/components/UiField.test.ts (1 test) 83ms
+ ✓ src/components/UiCheckbox.test.ts (1 test) 57ms
+ ✓ src/components/SectionCard.test.ts (1 test) 41ms
+ ✓ src/components/ResultPanel.test.ts (1 test) 33ms
+
+ Test Files  12 passed (12)
+      Tests  43 passed (43)
+   Start at  13:00:50
+   Duration  5.52s (transform 3.81s, setup 108ms, collect 13.12s, tests 1.75s, environment 10.99s, prepare 1.84s)
+

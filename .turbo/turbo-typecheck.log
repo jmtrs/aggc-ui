@@ -1,0 +1,16 @@
+
+> @aggc/ui@0.7.2 typecheck /Users/jmtrs/IdeaProjects/private-ai/aggc-ui
+> npm run panda:codegen && vue-tsc --noEmit
+
+
+> @aggc/ui@0.7.2 panda:codegen
+> panda codegen && panda cssgen --outfile styled-system/styles.css
+
+✔️ `styled-system/css`: the css function to author styles
+✔️ `styled-system/tokens`: the css variables and js function to query your tokens
+✔️ `styled-system/patterns`: functions to implement and apply common layout patterns
+✔️ `styled-system/jsx`: styled jsx elements for vue
+
+
+🐼 info [css] /Users/jmtrs/IdeaProjects/private-ai/aggc-ui/styled-system/styles.css
+🐼 info [hrtime] Successfully extracted css from 103 file(s) ✨ (104.19ms)
