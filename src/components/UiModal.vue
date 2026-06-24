@@ -20,6 +20,7 @@ import {
   uiModalHeaderContentClass,
   uiModalOverlayClass,
   uiModalTitleClass,
+  uiModalWrapperClass,
 } from "./UiModal.styles";
 
 withDefaults(
@@ -52,7 +53,8 @@ function handleOpenChange(open: boolean) {
   <DialogRoot :open="open" @update:open="handleOpenChange">
     <DialogPortal>
       <DialogOverlay :class="uiModalOverlayClass" />
-      <DialogContent :class="uiModalContentClass({ size })">
+      <div :class="uiModalWrapperClass">
+        <DialogContent :class="uiModalContentClass({ size })">
         <div :class="uiModalHeaderClass">
           <div :class="uiModalHeaderContentClass">
             <DialogTitle :class="uiModalTitleClass">{{ title }}</DialogTitle>
@@ -74,6 +76,7 @@ function handleOpenChange(open: boolean) {
           <slot name="actions" />
         </div>
       </DialogContent>
+      </div>
     </DialogPortal>
   </DialogRoot>
 </template>

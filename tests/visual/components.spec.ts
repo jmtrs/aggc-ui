@@ -22,6 +22,10 @@ const storyMatrix = [
   { storyId: "status-badge--tones", variantId: "tones", snapshot: "status-badge-tones" },
   { storyId: "ui-segmented-control--overview", variantId: "overview", snapshot: "segmented-control-overview" },
   { storyId: "page-surface--overview", variantId: "overview", snapshot: "page-surface-overview" },
+  { storyId: "ui-tooltip--default", variantId: "default", snapshot: "ui-tooltip-default" },
+  { storyId: "data-table--default", variantId: "default", snapshot: "data-table-default" },
+  { storyId: "data-table--loading", variantId: "loading", snapshot: "data-table-loading" },
+  { storyId: "data-table--sortable-paginated", variantId: "sortable", snapshot: "data-table-sortable" },
 ] as const;
 
 for (const theme of ["light", "dark"] as const) {
