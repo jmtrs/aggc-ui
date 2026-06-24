@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+### Patch Changes
+
+- [`a2e6e92`](https://github.com/jmtrs/aggc-ui/commit/a2e6e9289db1930fe76605de77c57fd3e9e1343e) Thanks [@jmtrs](https://github.com/jmtrs)! - Fix release workflow to use changesets/action for automatic GitHub Releases and Version Packages PRs.
+
 ## 0.7.1
 
 ### Minor Changes
