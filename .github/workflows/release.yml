@@ -21,11 +21,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - name: Version packages
-        run: npx changeset version
+      - name: Create Release Pull Request or Publish
+        uses: changesets/action@v1
+        with:
+          publish: npm publish --provenance --access public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Publish to npm
-        run: npm publish --provenance --access public
-        env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
