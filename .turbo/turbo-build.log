@@ -1,9 +1,9 @@
 
-> @aggc/ui@0.7.2 build /Users/jmtrs/IdeaProjects/private-ai/aggc-ui
+> @aggc/ui@0.8.0 build /Users/jmtrs/IdeaProjects/private-ai/aggc-ui
 > npm run panda:codegen && vite build && npm run build:types && npm run build:assets && npm run check:package
 
 
-> @aggc/ui@0.7.2 panda:codegen
+> @aggc/ui@0.8.0 panda:codegen
 > panda codegen && panda cssgen --outfile styled-system/styles.css
 
 ✔️ `styled-system/css`: the css function to author styles
@@ -13,7 +13,7 @@
 
 
 🐼 info [css] /Users/jmtrs/IdeaProjects/private-ai/aggc-ui/styled-system/styles.css
-🐼 info [hrtime] Successfully extracted css from 103 file(s) ✨ (98.88ms)
+🐼 info [hrtime] Successfully extracted css from 98 file(s) ✨ (66.87ms)
 vite v7.3.5 building client environment for production...
 transforming...
 ../node_modules/.pnpm/@vueuse+core@14.3.0_vue@3.5.38_typescript@5.9.3_/node_modules/@vueuse/core/dist/index.js (3362:0): A comment
@@ -26,29 +26,29 @@ in "../node_modules/.pnpm/@vueuse+core@14.3.0_vue@3.5.38_typescript@5.9.3_/node_
 "/* #__PURE__ */"
 
 in "../node_modules/.pnpm/@vueuse+core@14.3.0_vue@3.5.38_typescript@5.9.3_/node_modules/@vueuse/core/dist/index.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
-✓ 676 modules transformed.
+✓ 673 modules transformed.
 rendering chunks...
 computing gzip size...
 dist/ui.css                           0.20 kB │ gzip:  0.12 kB
 dist/tokens.js                        0.44 kB │ gzip:  0.20 kB
-dist/components.js                    0.91 kB │ gzip:  0.45 kB
+dist/components.js                    0.75 kB │ gzip:  0.41 kB
 dist/tokens-desktop.js                1.62 kB │ gzip:  0.50 kB
-dist/index.js                         3.15 kB │ gzip:  1.18 kB
+dist/index.js                         3.00 kB │ gzip:  1.13 kB
 dist/tokens-core.js                   4.67 kB │ gzip:  1.25 kB
 dist/styles.js                       10.27 kB │ gzip:  2.24 kB
 dist/chunks/pageHeader-YZ3BV9dQ.js   24.03 kB │ gzip:  7.77 kB
-dist/chunks/DataTable-CIiU5Jx3.js   235.28 kB │ gzip: 53.81 kB
-✓ built in 2.53s
+dist/chunks/DataTable-9A6B8apO.js   217.23 kB │ gzip: 49.97 kB
+✓ built in 864ms
 
-> @aggc/ui@0.7.2 build:types
+> @aggc/ui@0.8.0 build:types
 > vue-tsc --project tsconfig.build.json --declaration --emitDeclarationOnly --declarationDir dist
 
 
-> @aggc/ui@0.7.2 build:assets
+> @aggc/ui@0.8.0 build:assets
 > node ./scripts/copy-fonts.mjs
 
 
-> @aggc/ui@0.7.2 check:package
+> @aggc/ui@0.8.0 check:package
 > node ./scripts/check-package.mjs
 
 Package artifacts look valid.
