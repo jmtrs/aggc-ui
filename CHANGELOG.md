@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3
+
+### Patch Changes
+
+- [`5b372fe`](https://github.com/jmtrs/aggc-ui/commit/5b372fec7906555ff5c617b98d8380d3b374c9d7) Thanks [@jmtrs](https://github.com/jmtrs)! - Upgrade vitest to v4 for Vite 7 type compatibility in dev (devDependency only; no runtime or public API impact).
+
 ## 1.0.2
 
 ### Patch Changes
