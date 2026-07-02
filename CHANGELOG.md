@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.1.0
+
+### Minor Changes
+
+- DataTable: `mobileActionsRow` now uses `min-height` instead of fixed `height` and no longer clips overflow — bulk-action buttons always visible. `mobileSearchRow` top padding reduced for tighter spacing on small screens.
+
+## 1.0.4
+
+### Patch Changes
+
+- ae36077: Fix modal jump on desktop by separating centering from animation.
+
+  Previously, the modal used `transform: translate(-50%, -50%)` for centering while the animation keyframe `from` state overwrote this with `transform: translate(-50%, calc(-50% + 8px)) scale(0.97)`. With the `backwards` animation property, the keyframe `from` state applied immediately before the animation, causing a visual jump as the modal snapped from its incorrect position to the final centered position.
+
+  Now, a wrapper element handles centering (flexbox) and the content animates independently (translateY + scale), eliminating the conflict between layout and animation transforms.
+
 ## 1.0.3
 
 ### Patch Changes

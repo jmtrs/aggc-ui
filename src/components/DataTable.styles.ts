@@ -431,7 +431,7 @@ export const mobileToolbar = css({
 
 export const mobileSearchRow = css({
   display: { base: "flex", md: "none" },
-  pt: "3",
+  pt: "2",
   pb: "2",
   px: "4",
 });
@@ -440,11 +440,10 @@ export const mobileActionsRow = css({
   display: { base: "flex", md: "none" },
   alignItems: "center",
   gap: "2",
-  h: "10",
+  minH: "10",
   px: "4",
   pb: "2",
   flexWrap: "wrap",
-  overflow: "hidden",
 });
 
 export const mobileSelectAll = css({
