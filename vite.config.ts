@@ -24,7 +24,7 @@ export default defineConfig({
       fileName: (_, entryName) => `${entryName}.js`,
     },
     rollupOptions: {
-      external: ["vue", "lucide-vue-next"],
+      external: ["vue", "lucide-vue-next", "reka-ui"],
       output: {
         preserveModules: false,
         manualChunks: undefined,
