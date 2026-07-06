@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1
+
+### Patch Changes
+
+- [#29](https://github.com/jmtrs/aggc-ui/pull/29) [`d52261a`](https://github.com/jmtrs/aggc-ui/commit/d52261a0299a0cbda2df2b59bcb1165bd076e62c) Thanks [@jmtrs](https://github.com/jmtrs)! - Fix UiToastProvider crashing with "Cannot read properties of null (reading 'ce')" in consumer apps. reka-ui was being bundled into the published dist instead of externalized like vue and lucide-vue-next, which could duplicate reka-ui's runtime across chunks and break its internal Vue instance tracking. reka-ui is now external and resolved once from the consumer's own dependency tree.
+
 ## 1.1.0
 
 ### Minor Changes
